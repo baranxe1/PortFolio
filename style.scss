@@ -1,0 +1,65 @@
+$blanc: #fff;
+$vert: #44d498;
+$orange: #f29838;
+$rouge: red;
+$noir: #222;
+$gris: #f5f5f5;
+$blancgris: #f5fbf7;
+$grisnoir: #aaa;
+
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+  
+a{
+    text-decoration: none;
+}
+  
+li{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+// Le rond qui suit la souris
+.cursor{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition: .1s;
+
+    border: 1px solid #c6c6c6;
+    left: 0;
+    top: 0;
+}
+
+.cursor2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #c6c6c6;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    transition: .15s;
+
+    border: 1px solid #c6c6c6;
+    left: 0;
+    top: 0;
+}
+//
