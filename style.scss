@@ -1,11 +1,6 @@
-$blanc: #fff;
-$vert: #44d498;
-$orange: #f29838;
-$rouge: red;
 $noir: #222;
 $gris: #f5f5f5;
-$blancgris: #f5fbf7;
-$grisnoir: #aaa;
+$grisnoir: #313131;
 
 *{
     box-sizing: border-box;
@@ -17,6 +12,7 @@ $grisnoir: #aaa;
   
 a{
     text-decoration: none;
+    color: inherit;
 }
   
 li{
@@ -28,7 +24,176 @@ img{
     height: auto;
 }
 
+body{
+    background-color: $noir;
+}
 
+// Header
+.header{
+    position: sticky;
+    background: $grisnoir;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    &-hide{
+        display: none;
+    }
+    &-burger{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        display: none;
+        background: $grisnoir;
+        span{
+          width: 100%;
+          height: 3px;
+          position: absolute;
+          background: #fff;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: background 0.5s;
+        }
+        &:hover{
+          cursor: pointer;
+        }
+        &::before{
+          content: "";
+          width: 100%;
+          height: 3px;
+          position: absolute;
+          background: #fff;
+          bottom: 0;
+          transition: transform 0.5s;
+        }
+        &::after{
+          content: "";
+          width: 100%;
+          height: 3px;
+          position: absolute;
+          background: #fff;
+          transition: transform 0.5s;
+        }
+        &.active{
+          span{
+            background: transparent;
+          }
+          &::before{
+            transform: rotate(-45deg);
+            bottom: 50%;
+          }
+          &::after{
+            transform: rotate(45deg);
+            bottom: 50%;
+          }
+        }
+    }
+    &-nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        a::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: #fff;
+            color: #fff;
+            transition: width 0.5s;
+        }
+        a:hover::after{
+            width: 100%;
+        }
+        i{
+            color: #fff;
+            margin: 0 5px;
+        }
+        &-logo{
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-top: 0.2em;
+        }
+    }
+}
+// Fin du Header
+
+// Responsive du header
+@media (max-width: 1100px){
+    .header{
+        &-nav{
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 800px){
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-hide{
+            display: block;
+            margin-left: 50px;
+            &-logo{
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                margin-top: 0.2em;
+            }
+        }
+        &-burger{
+            display: block;
+            margin-right: 50px;
+        }
+        &-nav{
+            position: absolute;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-direction: column;
+            background: $grisnoir;
+            top: 100%;
+            //height: 0;
+            //width: 100%;
+            height: 350px;
+            width: 0;
+            overflow: hidden;
+            left: 0;
+            box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5);
+            transition: width ease-in-out 0.4s;
+            &-logo{
+                display: none;
+            }
+            a{
+                display: inline-block;
+                padding: 30px;
+            }
+            &.active{ 
+                //height: 350px;
+                width: 100%;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 4px;
+                height: 100%;
+                background: #fff;
+            }
+        }
+    }
+}
+// Fin du responsive du header
+
+.container{
+    &-img{
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+    }
+}
 
 // Le rond qui suit la souris
 .cursor{
@@ -41,7 +206,6 @@ img{
     pointer-events: none;
     mix-blend-mode: difference;
     transition: .1s;
-
     border: 1px solid #c6c6c6;
     left: 0;
     top: 0;
@@ -57,7 +221,6 @@ img{
     pointer-events: none;
     mix-blend-mode: difference;
     transition: .15s;
-
     border: 1px solid #c6c6c6;
     left: 0;
     top: 0;

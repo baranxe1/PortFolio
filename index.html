@@ -3,15 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortFolio-LNDev</title>
+    <title>LN Development</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/lndev.jpg" width="20px" height="20px">
+    <link rel="icon" href="img/lndev.jpg" width="20px" height="20px">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script defer src="app.js" type="module"></script>
+    <script defer src="burger.js"></script>
 </head>
 <body>
+    <!-- <i class="fas fa-spinner"></i> -->
 
+    <div class="header">
+        <div class="header-hide">
+            <img src="img/lndev.jpg" alt="" class="header-hide-logo">
+        </div>
+        <div class="header-burger">
+            <span></span>
+        </div>
+        <ul class="header-nav">
+            <li><a href="#home"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#infos"><i class="fa fa-info"></i>Infos</a></li>
+            <li><img src="img/lndev.jpg" alt="" class="header-nav-logo"></li>
+            <li><a href="#languages">Languages<i class="fa fa-code"></i></a></li>
+            <li><a href="#contact">Contact<i class="far fa-envelope"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div id="home">
+            <p>Success comes from curiosity, focus, perseverance and self-criticism.<span>Albert Einstein</span> </p>
+        </div>
+        <div id="infos">
+            <img src="img/ln_nb.jpg" alt="" class="container-img">
+            <p>Hi,
+                I am Leonel Ngoya often referred to as "LN".
+                I am a young 17 year old student passionate about computer programming and more specifically the frontend side.
+                I've been a coder for over a year now and think I'm good enough to run a project.
+            </p>
+        </div>
+        <div id="languages">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-sass"></i>
+            <i class="fab fa-js"></i>
+            <i class="fab fa-php"></i>
+            <i class="fab fa-python"></i>
+            <i class="fab fa-react"></i>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="contact">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
     <div class="cursor"></div>
     <div class="cursor2"></div>
-
-    <script src="app.js" type="module"></script>
 </body>
 </html>
