@@ -33,6 +33,85 @@ body{
     background-color: $noir;
 }
 
+// Animation du debut
+
+.load-container {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: $gris;
+    pointer-events: none;
+    .anim-bloc {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 400px;
+        z-index: 100;
+        .images-container {
+            width: 100%;
+            height: 0px;
+            position: absolute;
+            /* Pour faire monter la height de bas en haut */
+            bottom: 0px;
+            z-index: 150;
+            overflow: hidden;
+            .img-flip{
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: repeat;
+                background-position: center;
+                position: absolute;
+            }
+            .flip-img1 {
+                background-image: url(img/lndev.jpg);
+            }
+            .flip {
+                width: 100%;
+                height: 100%;
+                transform: translateY(100%);
+                position: absolute;
+            }
+            .f2 {
+                background: $noir;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .f2 h2{
+                padding: 10px 30px;
+                color: #fff;
+                font-family: Playfair Display, serif;
+                font-size: 40px;
+                text-transform: uppercase;
+                transform: translateY(200px);
+            }
+        }
+        .bloc-txt {
+            background: $noir;
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            height: 0;
+            z-index: 175;
+            overflow: hidden;
+            h2 {
+                padding: 10px 30px;
+                color: #fff;
+                font-family: Playfair Display, serif;
+                font-size: 40px;
+                text-transform: uppercase;
+                transform: translateY(100px);
+            }
+        }
+    }
+}
+
+//
+
 // Header
 .header{
     position: fixed;
@@ -46,7 +125,7 @@ body{
     color: #fff;
     font-size: 20px;
     transition: 0.3s;
-    z-index: 100000000;
+    z-index: 5;
     &-hide{
         display: none;
     }
@@ -106,20 +185,25 @@ body{
         width: 50%;
         li{
             a{
+                position: relative;
                 i{
                     margin: 0 5px;
                 }
-                &::after{
+                &::before{
                     content: '';
                     display: block;
-                    width: 0;
-                    height: 1px;
-                    background: #fff;
-                    color: #fff;
-                    transition: width 0.5s;
-                }
-                &:hover::after{
+                    position: absolute;
                     width: 100%;
+                    background: #fff;
+                    height: 2px;
+                    bottom: -5px;
+                    transform-origin: 600px 0;
+                    transform: scaleX(0);
+                    transition: transform .4s;
+                }
+                &:hover::before{
+                    transform-origin: -600px 0;
+                    transform: scaleX(1);
                 }
             }
         }

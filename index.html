@@ -7,11 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/lndev.jpg" width="20px" height="20px">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    <script defer src="app.js" type="module"></script>
-    <script defer src="burger.js"></script>
+    <script src="app.js" defer ></script>
+    <script src="burger.js" defer></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js" defer></script>
 </head>
 <body>
-    <!-- <i class="fas fa-spinner"></i> <i class="fas fa-arrow-circle-down"></i>-->
+    <div class="load-container">
+        <div class="anim-bloc">
+          <div class="images-container">
+              <div class="img-flip flip-img1"></div>
+              <div class="flip f2"><h2>WELCOME.</h2></div>
+          </div>
+          <div class="bloc-txt">
+            <h2>LN DEV</h2>
+          </div>
+        </div>
+    </div>
     <div class="header">
         <div class="header-hide">
             <img src="img/lndev.jpg" alt="" class="header-hide-logo">
@@ -32,7 +45,7 @@
     </div>
     <div class="container">
         <div class="container-home" id="home">
-            <p><span>Success</span> comes from <span>curiosity</span>, <span>focus</span>, <span>perseverance</span> and <span>self-criticism</span>.</p>
+            <p class="container-home-citation"><span>Success</span> comes from <span>curiosity</span>, <span>focus</span>, <span>perseverance</span> and <span>self-criticism</span>.</p>
             <span class="container-home-autor">Albert Einstein</span>
         </div>
         <div  class="container-infos" id="infos">
