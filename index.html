@@ -8,22 +8,24 @@
     <link rel="icon" href="img/lndev.jpg" width="20px" height="20px">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <script src="app.js" defer ></script>
-    <script src="burger.js" defer></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js" defer></script>
+    <script src="gsap.min.js" defer></script>
 </head>
 <body>
     <div class="load-container">
         <div class="anim-bloc">
           <div class="images-container">
               <div class="img-flip flip-img1"></div>
-              <div class="flip f2"><h2>WELCOME.</h2></div>
+              <div class="flip f2"><h2>BIENVENUE.</h2></div>
           </div>
           <div class="bloc-txt">
             <h2>LN DEV</h2>
           </div>
         </div>
+    </div>
+    <div class="file">
+        <a href="https://drive.google.com/file/d/1zdf7SO2UL9oRMnJVZoI-jawXxpKYBnDb/view?usp=drivesdk" target="_blank"><i class="fas fa-file"></i></a>
+        <p>Télécharger mon CV</p>
     </div>
     <div class="header">
         <div class="header-hide">
@@ -33,11 +35,15 @@
             <span></span>
         </div>
         <ul class="header-nav">
-            <li><a href="#home"><i class="fa fa-home"></i>Home</a></li>
-            <li><a href="#infos"><i class="fa fa-info"></i>Infos</a></li>
+            <div class="header-nav-children">
+                <li><a href="#home"><i class="fa fa-home"></i>Acceuil</a></li>
+                <li><a href="#infos"><i class="fa fa-info"></i>A Propos</a></li>
+            </div>
             <li><img src="img/lndev.jpg" alt="" class="header-nav-logo"></li> 
-            <li><a href="#languages">Languages<i class="fa fa-code"></i></a></li>
-            <li><a href="#contact">Contact<i class="far fa-envelope"></i></a></li>
+            <div class="header-nav-children">
+                <li><a href="#services">Mes Services<i class="fa fa-code"></i></a></li>
+                <li><a href="#contact">Me Contacter<i class="far fa-envelope"></i></a></li>
+            </div>
         </ul>
         <div class="header-arrow">
             <a href="#infos"><i class="fas fa-arrow-circle-down"></i></a>
@@ -51,7 +57,7 @@
         <div  class="container-infos" id="infos">
             <img src="img/ln_nb.jpg" alt="" class="container-infos-img">
             <p>Hi,
-                I am <span>Leonel Ngoya</span> often referred to as "<span>LN</span>".
+                I am <span class="leonelngoya">Leonel Ngoya</span> often referred to as "<span>LN</span>".
                 I am a young 17 year old student passionate about computer programming and more specifically the <span>frontend</span> side.
                 I've been a coder for over a year now and think I'm good enough to run a project.
             </p>
